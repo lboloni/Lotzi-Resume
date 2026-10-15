@@ -145,10 +145,10 @@ Nine papers appear twice under the same title:
   - `Semmel-2006-Report` is a section of the NASA KSC 2005 Annual Report.
   - Move them to an "Other" group, or drop them.
 - **Stale statuses:**
-  - CAI-2026 is still "to be published" (the conference was in May 2026).
-  - ICRA-2026, ISPN-2026, ASAB-2026 and MM-SpatialAI-2026 need page numbers and DOIs once these are available.
+  - ICRA-2026 and CAI-2026 have DOIs but no page numbers yet; ISPN-2026, ASAB-2026 and MM-SpatialAI-2026 have neither.
 - **Order:** the TNSM 2022 journal paper is listed above two 2023 papers.
-- **Missing DOIs:** 28 cited entries from 2016 or later still have none (mostly 2016-2022 conference papers and the 2026 papers). Look each one up on Crossref and check it before adding it.
+- **Missing DOIs:** the 2016-2026 entries were looked up on Crossref on 2026-10-15; 14 DOIs were added. The 14 that remain have no DOI at their venue: ICLR 2021 and 2022, NeurIPS 2019, BMVC 2022, FLAIRS 2016 (two papers), and eight workshop papers or abstracts (ASAB and MM-SpatialAI 2026, ISPN 2026, WiT 2020, the NeurIPS 2020 DRL workshop, AIT and ARIAL 2018, ATSE 2016). Entries before 2016 were not looked up.
+- **Published titles:** two papers were published under a different title than the bib had; the bib now uses the published ones: AAAI-2018 "From Virtual Demonstration to Real-World Manipulation Using LSTM and MDN" (was "Learning real manipulation tasks from virtual demonstrations ...") and NeurIPS-2023 "TrojLLM: A Black-box Trojan Prompt Attack on Large Language Models" (was "TrojPrompt ...", also author order and pages).
 - **Venue wording:** "Proc. of", "Proceedings of" and bare venue names are still mixed; only the broken forms ("Proc of", "Prof. of") were fixed.
 
 ### 2.7 Talks (`talks.tex`)
