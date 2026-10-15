@@ -11,7 +11,7 @@ Nothing below has been changed yet:
 
 ## 0. Top priorities
 
-1. **Visible rendering bugs.** A reader sees these on the first pages:
+1. **[DONE 2026-10-15, all rows of §3] Visible rendering bugs.** A reader sees these on the first pages:
    - The web address in the header prints as `https://www.cs.ucf.edu/ lboloni`: the `~` became a space.
    - "Professional societies" has a garbled line: "Member of the IEEE Computer Society (since 2000) Systems of the IEEE Systems, Man and Cybernetics Society."
    - Three publications show literal HTML: `<b>Best Paper Award</b>`, `<b>Kurzweil Best AGI Idea Prize 2014</b>` and `<b>IAAI-05 Deployed Application Award</b>`.
@@ -26,7 +26,7 @@ Nothing below has been changed yet:
    - Area Chair for ICLR 2027, Senior PC for AAAI 2022, AAAI 2027 and IJCAI 2025, and Senior TPC for LCN 2014, 2015 and 2017 are scattered among about 195 program-committee items.
    - The list is in **oldest-first** order, while every other list in the CV is newest first.
    - The ICML 2026 Silver Reviewer recognition is buried at the end of one item.
-4. **Work Experience has a factual error.**
+4. **[DONE 2026-10-15: May 2000 – June 2002] Work Experience has a factual error.**
    - CPlane Inc. shows "August 2002 – August 2008", the same dates as the UCF Assistant Professor position.
    - The commented-out source says May 2000 – June 2002.
 5. **Volume hides substance.** These lists dominate the page count but say little about current impact:
@@ -240,7 +240,9 @@ Nine papers appear twice under the same title:
   - "COVID-19 App for UCF Workgroup (2019)": 2020?
 - **Typos in the PC list:** see §4.
 
-## 3. Rendering bugs (fix first)
+## 3. Rendering bugs (fix first) [DONE 2026-10-15]
+
+All rows fixed. The award notes now print in bold through a biblatex source map in `lotzicv.sty`; `Boloni.bib` keeps its HTML for the webpage. Checked: the only text changes against the previous build are these fixes and the CPlane dates, and the counts are still 2 / 15 / 53 / 160.
 
 | Where | What the PDF shows | Cause | Fix |
 |---|---|---|---|
