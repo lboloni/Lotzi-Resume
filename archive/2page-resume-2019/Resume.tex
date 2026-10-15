@@ -1,0 +1,159 @@
+\documentclass[10pt]{resume}
+
+\usepackage{dejavu}
+\renewcommand{\familydefault}{\sfdefault}
+\renewcommand{\categoryfont}{\sc}
+
+%
+% set the space used for category titles here:
+% use the same value for oddsidemargin and marginparwidth [the latter
+% 		will be reset to account for marginparsep]
+%
+\setlength{\oddsidemargin}{1.1in}
+\setlength{\marginparwidth}{1.1in}
+%
+% calculate other dimensions [textwidth and evensidemargin]
+% in function of oddsidemargin and marginparwidth:
+% would be nicer to put in the class file...
+%
+\addtolength{\marginparwidth}{-\marginparsep}
+ \setlength{\evensidemargin}{\oddsidemargin}
+ \setlength{\textwidth}{\paperwidth}
+ \addtolength{\textwidth}{-2in}
+ \addtolength{\textwidth}{-2\oddsidemargin}
+ \addtolength{\textwidth}{\marginparwidth}
+ \addtolength{\textwidth}{\marginparsep}
+%
+%
+\setlength{\topmargin}{-0.5in}
+%
+%
+\renewcommand{\labelcitem}{$\diamond$}
+\renewcommand{\labelitemi}{$\cdot$}
+\newcommand{\first}{$1^{\mbox{\scriptsize st}}$\ }
+\newcommand{\second}{$2^{\mbox{\scriptsize nd}}$\ }
+\newcommand{\third}{$3^{\mbox{\scriptsize rd}}$\ }
+
+\sloppy
+\author{Ladislau B{\"o}l{\"o}ni}
+% ------ Address --------------------------------------------------------
+
+\address{Dept. of Computer Science.\\
+        University of Central Florida\\
+}{
+        Phone: 407-823-2320 \\
+	E-mail: {\small\tt lboloni@ucf.edu}\\
+	Web: {\small\tt http://www.cs.ucf.edu/$\sim$lboloni}\\
+}
+
+
+\begin{document}
+\maketitle
+
+% --------- Education ----------------------------------------------------
+
+\begin{category}{Education}
+
+\citem{Purdue University}, West Lafayette \\
+May 2000, Ph.D. in Computer Science \\
+Thesis title: {\em Contributions to distributed object systems and network
+agents}
+
+\citem{Purdue University}, West Lafayette \\
+May 1999, M.Sc. in Computer Science \\
+Thesis title: {\em Meta-programming environment},
+
+\citem{Technical University of Cluj-Napoca}, Romania\\
+June 1993. Diploma Engineer in Computer Engineering
+Thesis title: {\em Small Vocabulary Speech Recognition Algorithms}
+
+%\citem{Scholarships}
+%\begin{itemize}
+%\item Something here?
+%\end{itemize}
+\end{category}
+
+
+% --------- Research interests ------------------------------------------
+
+\begin{category}{Research interests}
+
+\citembullet {\bf Robotics:} deep reinforcement learning, deep learning from demonstration, vision-based end-to-end learning, human-robot interaction
+
+\citembullet {\bf Artificial intelligence:} deep learning, autonomous agents, human-agent-robot teamwork
+
+\citembullet {\bf Social behavior modeling:} Modeling social and cultural behavior
+
+\citembullet {\bf Networking and distributed systems:} sensor networks, cloud computing, task scheduling and resource allocation.
+
+\citembullet {\bf Artificial General Intelligence:} cognitive architectures, narrative reasoning
+
+\end{category}
+
+% --------- Research interests ------------------------------------------
+
+\begin{category}{Professional societies}
+
+\citembullet Senior Member of Institute of Electrical and Electronics
+Engineers (IEEE) since 2005, member since 1998, member of the IEEE Computer
+Society.
+\citembullet Member of Association of Computing Machinery (ACM).
+\citembullet Member of the  American Association for Artificial Intelligence
+(AAAI).
+
+\end{category}
+
+
+% -------- Work experience --------------------------------------------
+
+\begin{category}{Work \\experience}
+
+
+  \citem{August 2017 - present} Professor, Dept. of Computer Science, University of Central Florida.
+
+  \citem{June 2019} Visiting Researcher, Universit{\'e} de Toulouse / ENSEEIHT, Toulouse, France.
+
+  \citem{August 2018 - June 2019} Visiting Researcher, KTH Royal Institute of Technology, Stockholm, Sweden.
+
+  \citem{August 2008 - August 2017} Associate Professor, Dept. of Computer Science, University of Central Florida.
+
+  \citem{February 2015 - December 2017} Consulting Position, Chief Software Architect Composure.AI (formerly MosaixSoft) Inc., Los Altos, CA.
+
+  \citem{April 2012 - July 2012} Visiting Researcher, University of Rome ``La Sapientia'', Rome, Italy.
+
+  \citem{August 2011 - December 2011} Visiting Researcher, Imperial College, London, England.
+
+  \citem{August 2002 - August 2008} Assistant Professor, School of Electrical Engineering and Computer Science, University of Central Florida.
+
+  \citem{May 2000 - June 2002} CPlane Inc. Sunnyvale, Group manager, Architect for
+  Infrastructure, Product Designer for Traffic Engineering
+
+\end{category}
+
+\clearpage
+
+\begin{category}{Selected publications}
+\citemnobullet{}
+
+\vspace{-1.4cm}
+\renewcommand\refname{ }
+\input{SelectedPublications}
+
+\end{category}
+
+%\renewcommand\refname{ }
+%\citem{Journal articles}
+%\vspace{-1.1cm}
+%\input{Journal}
+
+%\renewcommand\refname{ }
+%\citem{Refereed conference articles}
+%\vspace{-1cm}
+%\input{Conference}
+
+%\end{category}
+
+% -------- Publication --------------------------------------------
+
+
+\end{document}

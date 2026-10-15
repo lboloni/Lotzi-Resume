@@ -1,0 +1,249 @@
+\documentclass{resume}
+\usepackage{dejavu}
+\renewcommand{\familydefault}{\sfdefault}
+\renewcommand{\categoryfont}{\sc}
+
+%
+% set the space used for category titles here:
+% use the same value for oddsidemargin and marginparwidth [the latter
+% 		will be reset to account for marginparsep]
+%
+\setlength{\oddsidemargin}{1.1in}
+\setlength{\marginparwidth}{1.1in}
+%
+% calculate other dimensions [textwidth and evensidemargin]
+% in function of oddsidemargin and marginparwidth:
+% would be nicer to put in the class file...
+%
+\addtolength{\marginparwidth}{-\marginparsep}
+ \setlength{\evensidemargin}{\oddsidemargin}
+ \setlength{\textwidth}{\paperwidth}
+ \addtolength{\textwidth}{-2in}
+ \addtolength{\textwidth}{-2\oddsidemargin}
+ \addtolength{\textwidth}{\marginparwidth}
+ \addtolength{\textwidth}{\marginparsep}
+%
+%
+\setlength{\topmargin}{-0.5in}
+%
+%
+\renewcommand{\labelcitem}{$\diamond$}
+\renewcommand{\labelitemi}{$\cdot$}
+\newcommand{\first}{$1^{\mbox{\scriptsize st}}$\ }
+\newcommand{\second}{$2^{\mbox{\scriptsize nd}}$\ }
+\newcommand{\third}{$3^{\mbox{\scriptsize rd}}$\ }
+
+\sloppy
+\author{Ladislau B{\"o}l{\"o}ni}
+% ------ Address --------------------------------------------------------
+
+\address{Dept of Computer Science\\
+        University of Central Florida\\
+	P.O.Box 162450\\
+	Orlando FL 32816-2450\\
+}{
+	{\small\tt 407-823-2320} \\
+	{\small\tt ladislau.boloni@ucf.edu}\\
+	{\small\tt www.cs.ucf.edu/$\sim$lboloni}\\
+	{\small\tt www.linkedin.com/in/lotzi-boloni}\\
+}
+
+
+\begin{document}
+\maketitle
+
+
+% --------- Education ----------------------------------------------------
+
+\begin{category}{Education}
+
+\citem{Purdue University}, West Lafayette \\
+May 2000, Ph.D. in Computer Science \\
+Dissertation: {\em Contributions to distributed object systems and network
+agents} \\
+Advisor: {\em Dan C. Marinescu}
+
+\citem{Purdue University}, West Lafayette \\
+May 1999, M.Sc. in Computer Science \\
+Thesis title: {\em Meta-programming environment}
+
+\citem{Technical University of Cluj-Napoca}, Romania\\
+June 1993, Diploma Engineer in Computer Engineering \\
+Graduation project: {\em A small-vocabulary speech recognition system}
+
+%\citem{Scholarships}
+%\begin{itemize}
+%\item Something here?
+%\end{itemize}
+\end{category}
+
+
+% --------- Research interests ------------------------------------------
+
+\begin{category}{Research interests}
+
+\citembullet {\bf Robotics:} deep reinforcement learning, deep learning from demonstration, vision-based end-to-end learning, human-robot interaction
+
+\citembullet {\bf Artificial intelligence:} deep learning, autonomous agents, human-agent-robot teamwork
+
+\citembullet {\bf Social behavior modeling:} Modeling social and cultural behavior
+
+\citembullet {\bf Networking and distributed systems:} sensor networks, cloud computing, task scheduling and resource allocation.
+
+\citembullet {\bf Artificial General Intelligence:} cognitive architectures, narrative reasoning
+
+\end{category}
+
+% --------- Professional societies ------------------------------------------
+
+\begin{category}{Professional societies}
+
+\citembullet Senior Member of the Institute of Electrical and Electronics
+Engineers (IEEE) since 2005, member since 1998.
+\citembullet Member of the IEEE Computer Society.
+\citembullet Member of the Technical Committee on Distributed Intelligent
+Systems of the IEEE Systems, Man and Cybernetics Society.
+% http://www.ieeesmc.org/technicalcommittess/tc_dis.html
+\citembullet Senior member of the Association of Computing Machinery (ACM).
+\citembullet Member of the American Association for Artificial Intelligence
+(AAAI).
+
+\end{category}
+
+% --------- Awards ------------------------------------------
+
+\begin{category}{Awards}
+
+\citembullet Selected for the University of Central Florida Scroll \& Quill Society, bestowed in recognition of sustained and outstanding achievements in research and/or creative activities at UCF (October 2021).
+
+\citembullet Best Abstract Award, The 2nd Annual Women in IoT (WiT) (Virtual) Workshop: AI on the Edge Warren B. Nelms Institute for the Connected World, University of Florida for "A Privacy-Preserving Approach for Human Daily Activities Prediction", by Sharare Zehtabian, Siavash Khodadadeh, Ladislau Bölöni and Damla Turgut. 
+
+\citembullet Finalist in the XPrize Pandemic Response Challenge with the team
+Pandemic Wave Predictor (PAWP) composed of Sharare Zehtabian, Siavash Khodadadeh and Ladislau Bölöni. Highest daily ranking 5th out of 336 registered teams.
+
+\citembullet University of Central Florida Research Incentive Award, 2019.
+
+\citembullet Kurzweil Best AGI Idea Prize 2014 for the paper ``Autobiography based prediction in a situated AGI agent'', by L. Bölöni at the Seventh Conf. of Artificial General Intelligence (AGI-2014).
+
+\citembullet Best Paper Award for the paper ``IVE: improving the value of information in energy-constrained intruder tracking sensor networks'', by D. Turgut and L. Bölöni at the IEEE Int. Conf. on Communications (ICC-2013).
+
+\citembullet NASA Software Award, August 2006 for the NASA Engineering Shuttle Telemetry Agent - NESTA.
+
+\citembullet AAAI Deployed Application Award for the paper ``NESTA: NASA Engineering Shuttle Telemetry Agent'' by G.S. Semmel, S.R. Davis, K.W. Leucht, D.A. Rowe, K.E. Smith, and L. Bölöni at the AAAI-2005 conference, July 2005.
+
+\citembullet Member of the Upsilon Pi Epsilon Computer Sciences Honor Society, Beta Chapter of Indiana.
+
+\citembullet Scholarship offered by Lucent Technologies for the university year 1998-99.
+
+\citembullet Scholarship of the Hungarian Academy of Science the university year 1994-95, spent at the Analogical and Neural Computing Laboratory at the Computers and Automation Institute of Hungarian Academy of Science, working in the domain of cellular neural networks.
+
+\citembullet Romanian Republican Scholarship in university year 1992-93 (awarded for one student in the department).
+
+\citembullet Won the first prize at the Romanian National Programming Contest of the students in 1990 (individual competition) and the third prize in  1991 and 1992 (with the team of the university).
+
+\end{category}
+
+
+% -------- Work experience --------------------------------------------
+
+\begin{category}{Work \\experience}
+\input{Resume/WorkExperience}
+
+\end{category}
+
+
+% -------- Teaching experience --------------------------------------------
+\begin{category}{Teaching \\experience}
+
+\input{Resume/Teaching}
+%\citem{some stuff will need to come here}
+
+\end{category}
+
+
+% -------- Publication --------------------------------------------
+
+% \newpage
+% -------- Citations -----------------------------------------------
+
+%\begin{category}{Citations}
+
+\begin{category}{Publications}
+
+\citem{Total number of citations: 7675} (according to Google Scholar)
+\citem{h-index: 36, i10-index: 92}
+%\end{category}
+
+%
+
+% this was requested for the promotion
+
+% \citem {\bf About the order of authors:} the typical convention in Computer Science publications puts the student with the highest contribution to the paper first, followed by other students in the decreasing order of contributions. The major faculty(s) are typically the last author(s).
+
+\vspace{0.5cm}
+
+\citem{Books}
+\vspace{-1.1cm}
+\renewcommand\refname{ }
+\input{Resume/Generated/Book}
+\vspace{0.5cm}
+
+%
+%   Book chapters
+%
+\citem{Book chapters}
+\vspace{-1.1cm}
+\renewcommand\refname{ }
+\input{Resume/Generated/Chapter}
+\vspace{0.5cm}
+
+%
+%   Journal articles
+%
+% Temporary necessary
+% \clearpage
+\citem{Journal articles}
+\vspace{-1.1cm}
+\renewcommand\refname{ }
+\input{Resume/Generated/Journal}
+\vspace{0.5cm}
+
+%\renewcommand\refname{ }
+%
+%   Conference and symposium articles
+%
+\citem{Refereed conference and symposium papers}
+\vspace{-1cm}
+\renewcommand\refname{ }
+\input{Resume/Generated/Conference}
+\vspace{0.5cm}
+
+%
+%   Workshop articles
+%
+%\citem{Refereed workshop papers}
+%\vspace{-1cm}
+%\renewcommand\refname{ }
+%\input{Resume/Generated/Workshop}
+%\vspace{0.5cm}
+
+\end{category}
+
+
+% -------- Talks -----------------------------------------------
+
+\begin{category}{Talks}
+
+\citem{Invited talks, panels}
+%\vspace{-1cm}
+\input{Resume/Talks}
+\end{category}
+
+% -------- Service, funding, etc------------------------------------
+
+
+\input{Resume/Students}
+\input{Resume/Service}
+% \input{Resume/Funding}
+
+\end{document}

@@ -1,0 +1,34 @@
+Students who should not appear in CV anymore, as they dropped out from me or somewhere else:
+
+From other people
+
+% probably dropped out
+
+%\citem{Rex Oleson}\\
+%candidacy April 2007, advisor David Kaup.
+
+%\citem{Johann Nguyen}\\
+%candidacy planned Fall 2007, advisor Avelino Gonzalez.
+
+%\citem{Carlos Leon-Barth}\\
+%defense planned Spring 2011, advisor Ron DeMara.
+
+%\citem{Adam Campbell}\\
+%candidacy passed, advisor Annie S. Wu
+
+%\citem{Fahad Shah}\\
+%advisor Gita Sukthankar
+
+%\citem{Bulent Tastan}\\
+%advisor Gita Sukthankar % doctoral proposal 2014
+
+% \citem{Faraz Hussain}\\
+% advisor Gary T. Leavens % asked 2010
+
+%\citem{Seema Mahajan} \\
+%topic: Modeling and Prediction of Rainfall Data \\
+%Computer Engineering Dept. of Dharmsinh Desai University, Nadiad, Gujarat, India (external reviewer)
+% asked September 2019
+
+%\citem{Salman Khokhar} \\
+% Topic: Computer Vision, advisor Mubarak Shah
