@@ -1,0 +1,9 @@
+% Full CV with the Research Grants section.
+% Build from the repository root:
+%   latexmk -outdir=output variants/full-cv/CV-LotziBoloni_WithFunding.tex
+\documentclass[letterpaper, 10pt]{article}
+\usepackage{lotzicv}
+\addbibresource{source/bib/Boloni.bib}
+\input{source/data/metrics}
+\withfundingtrue
+\input{variants/full-cv/body}

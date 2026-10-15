@@ -1,0 +1,9 @@
+% Full CV without funding (the default version).
+% Build from the repository root:
+%   latexmk -outdir=output variants/full-cv/CV-LotziBoloni.tex
+\documentclass[letterpaper, 10pt]{article}
+\usepackage{lotzicv}
+\addbibresource{source/bib/Boloni.bib}
+\input{source/data/metrics}
+\withfundingfalse
+\input{variants/full-cv/body}

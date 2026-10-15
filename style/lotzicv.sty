@@ -1,0 +1,91 @@
+% lotzicv.sty -- layout of Lotzi's CV, taken unchanged from the preamble of the
+% Drive CV (CV/CV-LotziBoloni.tex, 2026-05-27). Load it after
+% \documentclass[letterpaper, 10pt]{article}. Needs xelatex (fontspec, fontawesome5).
+%
+% The preamble was based on a template with the following license:
+%--------------------------------------------------------------------%
+%	The MIT License (MIT)
+%
+%	Copyright (c) 2021 Jitin Nair
+%
+%	Permission is hereby granted, free of charge, to any person obtaining a copy
+%	of this software and associated documentation files (the "Software"), to deal
+%	in the Software without restriction, including without limitation the rights
+%	to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+%	copies of the Software, and to permit persons to whom the Software is
+%	furnished to do so, subject to the following conditions:
+%
+%	THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+%	IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+%	FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+%	AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+%	LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+%	OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+%	THE SOFTWARE.
+%-----------------------------------------------------------------------%
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{lotzicv}[2026/10/15 Lotzi Boloni CV layout]
+
+%----------------------------------------------------------------------------------------
+%	FONT
+%----------------------------------------------------------------------------------------
+
+% fontspec allows you to use TTF/OTF fonts directly
+\RequirePackage{fontspec}
+
+%------------------------------------------------------------------------------
+%	PACKAGES
+%------------------------------------------------------------------------------
+\RequirePackage{url}
+\RequirePackage{parskip}
+
+%other packages for formatting
+\RequirePackage{color}
+\RequirePackage{graphicx}
+\RequirePackage[dvipsnames]{xcolor}
+\RequirePackage[scale=0.9]{geometry}
+
+%tabularx environment
+\RequirePackage{tabularx}
+
+%for lists within experience section
+\RequirePackage{enumitem}
+% don't use, as clashes \usepackage{paralist}
+
+% centered version of 'X' col. type
+\newcolumntype{C}{>{\centering\arraybackslash}X}
+
+%to prevent spillover of tabular into next pages
+\RequirePackage{supertabular}
+\newlength{\fullcollw}
+\setlength{\fullcollw}{0.47\textwidth}
+
+%custom \section
+\RequirePackage{titlesec}
+\RequirePackage{multicol}
+\RequirePackage{multirow}
+
+%CV Sections inspired by:
+%http://stefano.italians.nl/archives/26
+\titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\titlerule]
+\titlespacing{\section}{0pt}{10pt}{10pt}
+
+%for publications
+\RequirePackage[style=ieee,maxnames=100]{biblatex}
+
+%Setup hyperref package, and colours for links
+\RequirePackage[unicode, draft=false]{hyperref}
+\definecolor{linkcolour}{rgb}{0,0.2,0.6}
+\hypersetup{colorlinks,breaklinks,urlcolor=linkcolour,linkcolor=linkcolour}
+
+%for social icons
+\RequirePackage{fontawesome5}
+
+%------------------------------------------------------------------------------
+%	VARIANT SWITCHES
+%------------------------------------------------------------------------------
+% \withfundingtrue prints the Research Grants section (CV-LotziBoloni_WithFunding).
+\newif\ifwithfunding
+\withfundingfalse
+
+\endinput
