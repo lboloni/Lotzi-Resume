@@ -4,10 +4,10 @@ Review of the full CV (`variants/full-cv`, 30 pages; 31 pages with funding) as o
 
 **Assumption:** a general-purpose CV for a full professor in computer science (AI and robotics), with no specific target position.
 
-Done items are removed from this plan; the rendering bugs and the CPlane dates were fixed on 2026-10-15 (commit 1c62b50).
+Done items are removed from this plan. Done on 2026-10-15: the rendering bugs and the CPlane dates (commit 1c62b50); the typos and the bib field clean-up (the former §3).
 - §1 needs Lotzi's decisions;
-- §3 is mechanical fixes that can be made at any time;
-- §4 proposes an order of work.
+- §2 lists the remaining fixes section by section;
+- §3 proposes an order of work.
 
 ## 0. Top priorities
 
@@ -125,9 +125,6 @@ Nine papers appear twice under the same title:
 - **Lab:** the lab or group that the PhD students belong to is not named.
 
 ### 2.4 Professional Societies (`societies.tex`)
-- **Names:**
-  - "Association **of** Computing Machinery" should be "Association **for** Computing Machinery".
-  - "American Association for Artificial Intelligence" has been the "Association for the Advancement of Artificial Intelligence" since 2007.
 - **Dates:** three dates are marked "approximate" in comments. Check them, or drop the years.
 - **Placement:** move the section near the end; it adds little up front.
 
@@ -139,7 +136,6 @@ Nine papers appear twice under the same title:
   - The 1990s scholarships and the 1990–92 programming-contest prizes can go into a short "Earlier honors" group.
 - **Format:**
   - Each item should end with its year in the same place.
-  - One item has wrong quotes: ”A Privacy-Preserving ...”.
   - Use one style: Award, venue or organization, year.
 
 ### 2.6 Publications (`publications.tex`, `publists/`, `Boloni.bib`)
@@ -151,26 +147,15 @@ Nine papers appear twice under the same title:
 - **Stale statuses:**
   - CAI-2026 is still "to be published" (the conference was in May 2026).
   - ICRA-2026, ISPN-2026, ASAB-2026 and MM-SpatialAI-2026 need page numbers and DOIs once these are available.
-- **Wrong dates:**
-  - ICLR-2021 shows "Jul. 2021"; ICLR 2021 was in May.
-  - The TNSM 2022 journal paper is listed above two 2023 papers.
-- **Missing DOIs:** 29 entries from 2016 or later have none. The list is in `tools/bibcheck.py` output and `REVIEW-BIBLIOGRAPHY.md`. The five DOIs that `damla.bib` has can be copied directly.
-- **Untidy fields:**
-  - DOI fields carry prefixes: "doi: doi : 10.1109", "DOI:10.1109", "https://doi.org/...". Store only the bare DOI.
-  - Some entries print a `url` next to the DOI (Kakar-2026-IoT, Gyenes-2023-Genetic, the IJCNLP paper).
-  - Some entries print an ISBN; FuturePlay prints a URL in the booktitle; HCW'00 prints a CiteSeer link.
-- **Number fields** that print as "8 Aug.", "9 2017", "4 2008" or "2 Feb." are `number`/`month` mix-ups. JPDC 2001 shows "vol. 6, no. 61"; it should be vol. 61, no. 6.
-- **The rest** (typos in titles, author names and venues) is in §3.
+- **Order:** the TNSM 2022 journal paper is listed above two 2023 papers.
+- **Missing DOIs:** 28 cited entries from 2016 or later still have none (mostly 2016-2022 conference papers and the 2026 papers). Look each one up on Crossref and check it before adding it.
+- **Venue wording:** "Proc. of", "Proceedings of" and bare venue names are still mixed; only the broken forms ("Proc of", "Prof. of") were fixed.
 
 ### 2.7 Talks (`talks.tex`)
 - **Group them:** keynotes or invited talks, then seminars, then panels. All 31 items are now "Guest seminar" or "Invited lecture".
 - **Duplicates:** the AGI-2014 and I2CE/IoTDI-2018 panels are listed both here and under Service > Panel discussions. Keep them in one place.
 - **Repeated titles:** "Apply AI in your field of choice for fun and profit" appears six times (2018–2019). One line with the list of venues is shorter.
 - **No talks after April 2025.** Add recent ones, if any.
-- **Small fixes:**
-  - leading spaces in two titles ("“ A pragmatic");
-  - stray quote before "University of New South Wales";
-  - "a complex social interactions".
 
 ### 2.8 Teaching (`teaching.tex`)
 - **Too long:** about 3.5 pages, with each semester as a numberless `\subsection`. A table with one row per course and the semesters taught (or a two-column list) fits on half a page.
@@ -187,7 +172,6 @@ Nine papers appear twice under the same title:
   - Add "Currently at" where it is missing (Bulumulle, Bai).
 - **Names:**
   - "Taranjeet Singh" is "T. S. Bhatia" in the papers. Use "Taranjeet Singh Bhatia".
-  - "Scott Vander Welde" should be "Scott Vander Weide".
 - **MSc alumni** are not in date order: 2014, 2008, 2004, 2005.
 - **PhD committees:**
   - 57 entries mix completed defenses with ongoing ones (no date).
@@ -196,7 +180,6 @@ Nine papers appear twice under the same title:
   - Alternative: give only the count, e.g. "Member of 57 PhD committees (2005–2026)", with the list in an appendix variant.
 - **MSc committees:** four entries say "planned Spring 2021/2022/2025". Update or drop them.
 - **Undergraduate advising:** names only. Add the outcome where there is one: REU, honors thesis, paper, award.
-- **Small fixes:** "allience", "milimeter", a stray closing quote in "communities”".
 
 ### 2.10 Service (`service*.tex`)
 - **Leadership first:** start Service with a short "Leadership and senior roles" list:
@@ -219,68 +202,12 @@ Nine papers appear twice under the same title:
 - **Service with funding agencies is not printed at all:** `service-agencies.tex` exists but `service.tex` leaves it out. It holds NSF panels 2005–2023, NIST, NIH SBIR and NASA, which is significant service. Include it.
 - **Committees:**
   - Four undated department items sit between dated ones. Add dates, or "(ongoing)".
-  - The headings say "commitees" (twice).
   - The two DAT cluster search committees (2018–19 and 2019–20) can be one line.
   - "COVID-19 App for UCF Workgroup (2019)": 2020?
-- **Typos in the PC list:** see §3.
 
-## 3. Data quality (mechanical)
+## 3. Proposed order of work
 
-### Typos in publications (`Boloni.bib`)
-- **Chapters:**
-  - "A. Duta" should be "A. Dutta" (`Kulbaka-2025-BookChapter`);
-  - "Kluwer Publising House".
-- **Journals:**
-  - "manuevering" (`Szots-2024-RoboMech`);
-  - "Special Issue on Special Issue Security" (`Castellon-2023-Electronics`);
-  - "maximum the value" (`Gjanci-2018-TMC`, see `REVIEW-BIBLIOGRAPHY.md`);
-  - "G. Marinescu" in `Bai-2005-Coordination`: check.
-- **Conferences:**
-  - "Prof. of IEEE Global" (`Mayle-2017-GLOBECOM`);
-  - "Comunications" (`Turgut-2013-ICC-IVE`);
-  - "43nd" (`Xu-2018-LCN`);
-  - "Lousiana" (`Rahmatizadeh-2018-RealVirtual`);
-  - "21th" (`SAKhan-2012-BRIMS`);
-  - "FLAIRS Conference,," (`White-2009-FLAIRS`);
-  - "Environmnents" (`Zehtabian-2020-ICAT-EGVE`);
-  - "genetic programing" (`Khan-2013-FLAIRS`);
-  - "Razgandi" (`Zehtabian-2020-ICNC`; elsewhere "Razghandi");
-  - "Tsompanopolou" vs "Tsompanopoulu";
-  - "Maheshwaran" vs "Maheswaran";
-  - "B. Rakos, Zarándy" (missing initial);
-  - "K.K.Jun", "J.Hámori" (missing spaces);
-  - "Ubiquituous".
-- **Venue formatting:**
-  - "Proc of", "Proc. of", "Proceedings of" and "in Demoed at" are mixed;
-  - some entries add a full address ("Los Alamitos, CA 90720-1314").
-
-### Typos in service and committees
-- **Venue names and places:**
-  - "Ultrecht";
-  - "Ubiquituous";
-  - "onPrinciples";
-  - "Philadephia";
-  - "luj-Napoca";
-  - "Aucland";
-  - "Dubai, United Emirates";
-  - "Xinyi District, Taipei City" (drop the district).
-- **Ordinal numbers:**
-  - "3nd International Conference";
-  - "IEEE 40h";
-  - "Eight International Workshop";
-  - "23nd IEEE ICMLA";
-  - "IEEE 22st".
-- **Dates:**
-  - "IEEE ICC-2021 ... June 7-11, 2020";
-  - BMVC 2022 is listed between ICLR-2023 and AAMAS-2023.
-- **Headings:**
-  - "commitees" (twice);
-  - capitalization varies: "Work Experience" vs "Professional societies" vs "Department and college level commitees".
-
-## 4. Proposed order of work
-
-1. **§3 typos and bib field clean-up,** together with the `REVIEW-BIBLIOGRAPHY.md` items.
-2. **Decisions in §1:**
+1. **Decisions in §1:**
    - funding in the default CV;
    - profile paragraph;
    - section order;
@@ -288,8 +215,8 @@ Nine papers appear twice under the same title:
    - duplicate titles;
    - selected publications;
    - marking student co-authors.
-3. **Rewrite the Research Interests** and add the Google Scholar and ORCID links (needs Lotzi's input).
-4. **Compress Teaching, Program committees, the reviewer list and PhD committees** (§2.8–2.10). These are the largest page savings: an estimated 30 pages down to about 20.
-5. **Sort the lists newest first,** using a script like `Damla-Resume/tools/sortitems.py`.
+2. **Rewrite the Research Interests** and add the Google Scholar and ORCID links (needs Lotzi's input).
+3. **Compress Teaching, Program committees, the reviewer list and PhD committees** (§2.8–2.10). These are the largest page savings: an estimated 30 pages down to about 20.
+4. **Sort the lists newest first,** using a script like `Damla-Resume/tools/sortitems.py`.
 
 After each step: rebuild both variants, check the publication counts with `tools/bibcheck.py`, and compare the text with the previous PDF.
