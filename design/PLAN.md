@@ -88,6 +88,20 @@ The paper PDFs and the other binary files are stored with **Git LFS** (Large Fil
 - On another computer, run `git lfs install` once before cloning.
 - Check after each import commit: `git lfs ls-files` lists every PDF, and `git lfs status` shows no binary file committed outside LFS.
 
+## Status
+
+Steps 1-9 were done on 2026-10-15.
+- **Build.** Both PDFs build with no LaTeX warnings: the default has 30 pages, `_WithFunding` has 31.
+- **Content check.** The May 27 PDF turned out to be out of date: the bib and the conference list were changed after it was built. The check therefore used a fresh build of the current Drive sources. All 30 pages of the default build are **pixel-identical** to it (`pdftoppm` + `compare`), and the publication counts are 2 / 15 / 53 / 160.
+  - The header needed a `%` after `\input{contact}`: a stray space after the full-width table had added an empty line on page 1.
+  - The Drive files had CRLF line endings. `source/` was converted to LF; `archive/` is unchanged.
+- **Unprinted section.** `service-agencies.tex` was also not printed in the Drive CV. It is imported but not included.
+- **Bibliography.** The two duplicated `\nocite` keys were removed. The review is in [REVIEW-BIBLIOGRAPHY.md](REVIEW-BIBLIOGRAPHY.md).
+- **Paper PDFs.** 67 PDFs were imported, not 69: two Drive files were byte-identical copies under an old name. Two files were renamed to their bib keys.
+- **Grants.** The sources are `Funding.tex` (to 2016), the NSF award database, and the acknowledgments in the 2017-2026 papers. New items are marked `\toconfirm` (red) in the `_WithFunding` PDF.
+- **Webpage.** `update-all.sh` reads the bib through `$LOTZI_RESUME`, because this checkout is at `~/Lotzi-Resume`, not next to Lotzi-Webpage. `bibweb.py` generates the same 239 files from the new location.
+- **Google Drive** was only read.
+
 ## Steps
 
 1. **Repository set-up.** Commit `.gitattributes` and `.gitignore` as the first commit after the initial README.
@@ -118,7 +132,7 @@ The paper PDFs and the other binary files are stored with **Git LFS** (Large Fil
    - PDFs for the papers after 2016 can be added later from the Drive year folders listed in `Lotzi-Literature-Review/OurPapers/INVENTORY.tsv`, one commit per batch.
 7. **Research Grants section.**
    - Add `source/sections/grants.tex`, newest first. Only the `_WithFunding` build prints it, after Publications. Each item gives the agency and program, the title, the role (PI or co-PI, with the other investigators), the period and the amount.
-   - The old sources stop in 2007: `Funding.tex` (15 items, funded and pending) and `FundingAllAttempts.tex` (29 items, including declined ones). For the later years, draft the list from the NSF Award Search and other public award databases, and from the funding acknowledgments in the group's papers.
+   - The old sources: `Funding.tex` (Lotzi's list of awarded grants, up to 2016) and `FundingAllAttempts.tex` (2002-2007, including pending and declined proposals). For the later years, draft the list from the NSF Award Search and other public award databases, and from the funding acknowledgments in the group's papers.
    - Mark each drafted item "to confirm". Lotzi confirms or corrects the list, and adds grants that are not public (industry, internal UCF).
    - List only awarded grants. Pending and declined proposals stay out.
    - Check: the two PDFs differ only in the Research Grants section (`pdftotext` and `diff`).
@@ -145,4 +159,10 @@ Likely versions: a short CV (to replace the 2019 two-page resume), an NSF bioske
 
 ## Open questions for Lotzi
 
-1. **Grants after 2007.** Is there a list of awarded grants (UCF research office, an older CV, an annual report) that the draft should start from? If not, the draft starts from the public award databases (step 7).
+1. **Grants.** Confirm the items marked [to confirm] in `CV-LotziBoloni_WithFunding.pdf`:
+   - NSF 2114948 and NSF 1931767 (PI);
+   - the 2022 end date of NSF 1409823;
+   - the new total.
+
+   Also: is Cyber Florida #220408 one of Lotzi's grants? Are there grants after 2016 that are not in public records, such as industry or internal UCF grants?
+2. **Bibliography.** Decide on the items in [REVIEW-BIBLIOGRAPHY.md](REVIEW-BIBLIOGRAPHY.md): the 8 uncited entries, the missing DOIs, and the author and title differences with damla.bib.
