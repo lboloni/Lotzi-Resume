@@ -4,32 +4,23 @@ Review of the full CV (`variants/full-cv`, 30 pages; 31 pages with funding) as o
 
 **Assumption:** a general-purpose CV for a full professor in computer science (AI and robotics), with no specific target position.
 
-Nothing below has been changed yet:
+Done items are removed from this plan; the rendering bugs and the CPlane dates were fixed on 2026-10-15 (commit 1c62b50).
 - §1 needs Lotzi's decisions;
-- §3 and §4 are mechanical fixes that can be made at any time;
-- §5 proposes an order of work.
+- §3 is mechanical fixes that can be made at any time;
+- §4 proposes an order of work.
 
 ## 0. Top priorities
 
-1. **[DONE 2026-10-15, all rows of §3] Visible rendering bugs.** A reader sees these on the first pages:
-   - The web address in the header prints as `https://www.cs.ucf.edu/ lboloni`: the `~` became a space.
-   - "Professional societies" has a garbled line: "Member of the IEEE Computer Society (since 2000) Systems of the IEEE Systems, Man and Cybernetics Society."
-   - Three publications show literal HTML: `<b>Best Paper Award</b>`, `<b>Kurzweil Best AGI Idea Prize 2014</b>` and `<b>IAAI-05 Deployed Application Award</b>`.
-   - Teaching has a stray section number "8.1" next to Spring 2011.
-   - Full list in §3.
-2. **The first page undersells current work.**
+1. **The first page undersells current work.**
    - The Research Interests still lead with themes from 10–20 years ago: social behavior modeling, networking, AGI.
    - The current work is missing or hidden: visual proprioception and robot learning, informative path planning, LLMs and hate-speech detection, AI for medical imaging, energy-efficient (green) AI.
    - The page has no Google Scholar or ORCID link.
    - The citation metrics have no date.
-3. **The strongest service roles are buried.**
+2. **The strongest service roles are buried.**
    - Area Chair for ICLR 2027, Senior PC for AAAI 2022, AAAI 2027 and IJCAI 2025, and Senior TPC for LCN 2014, 2015 and 2017 are scattered among about 195 program-committee items.
    - The list is in **oldest-first** order, while every other list in the CV is newest first.
    - The ICML 2026 Silver Reviewer recognition is buried at the end of one item.
-4. **[DONE 2026-10-15: May 2000 – June 2002] Work Experience has a factual error.**
-   - CPlane Inc. shows "August 2002 – August 2008", the same dates as the UCF Assistant Professor position.
-   - The commented-out source says May 2000 – June 2002.
-5. **Volume hides substance.** These lists dominate the page count but say little about current impact:
+3. **Volume hides substance.** These lists dominate the page count but say little about current impact:
    - Teaching: about 3.5 pages, one course per line.
    - Program committees: about 6.5 pages.
    - PhD committees: 57 entries over about 3 pages.
@@ -110,10 +101,7 @@ Nine papers appear twice under the same title:
 ## 2. Section by section
 
 ### 2.1 Contact (`contact.tex`)
-- **Web address:** the `~` in the displayed URL is lost (§3).
-- **Phone:**
-  - The `tel:` link is a placeholder, `+000000000000`.
-  - The displayed number is unformatted: "+4078232320". It should be "+1 (407) 823-2320".
+- **Phone:** the displayed number is unformatted: "+4078232320". It should be "+1 (407) 823-2320".
 - **Missing links:** Google Scholar, ORCID and the lab or group page.
 - **LinkedIn** shows "lotzi.boloni", but the link is `in/lotzi-boloni`. Check which one is right.
 
@@ -127,7 +115,6 @@ Nine papers appear twice under the same title:
 - **Move legacy themes to one closing line**, or drop them: social behavior modeling, cloud and grid scheduling, AGI and narrative reasoning.
 
 ### 2.3 Work Experience (`experience.tex`)
-- **CPlane dates are wrong** (§0.4).
 - **Rename** the section "Appointments" or "Professional Experience".
 - **Mark the overlaps:**
   - Composure.ai (2015–2017) overlapped the professorship; label it "consulting".
@@ -138,7 +125,6 @@ Nine papers appear twice under the same title:
 - **Lab:** the lab or group that the PhD students belong to is not named.
 
 ### 2.4 Professional Societies (`societies.tex`)
-- **Garbled line** (§3).
 - **Names:**
   - "Association **of** Computing Machinery" should be "Association **for** Computing Machinery".
   - "American Association for Artificial Intelligence" has been the "Association for the Advancement of Artificial Intelligence" since 2007.
@@ -174,7 +160,7 @@ Nine papers appear twice under the same title:
   - Some entries print a `url` next to the DOI (Kakar-2026-IoT, Gyenes-2023-Genetic, the IJCNLP paper).
   - Some entries print an ISBN; FuturePlay prints a URL in the booktitle; HCW'00 prints a CiteSeer link.
 - **Number fields** that print as "8 Aug.", "9 2017", "4 2008" or "2 Feb." are `number`/`month` mix-ups. JPDC 2001 shows "vol. 6, no. 61"; it should be vol. 61, no. 6.
-- **The rest** (typos in titles, author names and venues) is in §4.
+- **The rest** (typos in titles, author names and venues) is in §3.
 
 ### 2.7 Talks (`talks.tex`)
 - **Group them:** keynotes or invited talks, then seminars, then panels. All 31 items are now "Guest seminar" or "Invited lecture".
@@ -182,7 +168,6 @@ Nine papers appear twice under the same title:
 - **Repeated titles:** "Apply AI in your field of choice for fun and profit" appears six times (2018–2019). One line with the list of venues is shorter.
 - **No talks after April 2025.** Add recent ones, if any.
 - **Small fixes:**
-  - the AGI-2014 YouTube URL runs past the right margin (`\verb`), so it is cut off;
   - leading spaces in two titles ("“ A pragmatic");
   - stray quote before "University of New South Wales";
   - "a complex social interactions".
@@ -190,7 +175,6 @@ Nine papers appear twice under the same title:
 ### 2.8 Teaching (`teaching.tex`)
 - **Too long:** about 3.5 pages, with each semester as a numberless `\subsection`. A table with one row per course and the semesters taught (or a two-column list) fits on half a page.
 - **Errors:**
-  - Spring 2011 uses `\subsection` and prints "8.1" (§3);
   - Fall 2005 and Spring 2008 each appear twice;
   - "EEL 4781:" and "EEL 4781 -" mix separators;
   - CNT 5008 has two names.
@@ -238,23 +222,9 @@ Nine papers appear twice under the same title:
   - The headings say "commitees" (twice).
   - The two DAT cluster search committees (2018–19 and 2019–20) can be one line.
   - "COVID-19 App for UCF Workgroup (2019)": 2020?
-- **Typos in the PC list:** see §4.
+- **Typos in the PC list:** see §3.
 
-## 3. Rendering bugs (fix first) [DONE 2026-10-15]
-
-All rows fixed. The award notes now print in bold through a biblatex source map in `lotzicv.sty`; `Boloni.bib` keeps its HTML for the webpage. Checked: the only text changes against the previous build are these fixes and the CPlane dates, and the counts are still 2 / 15 / 53 / 160.
-
-| Where | What the PDF shows | Cause | Fix |
-|---|---|---|---|
-| Header | `https://www.cs.ucf.edu/ lboloni` | `~` in the link text is a non-breaking space | `\textasciitilde{}lboloni` or `\url{}` |
-| Header | phone link dials `+000000000000` | placeholder `tel:` | real number |
-| Professional societies | "…(since 2000) Systems of the IEEE Systems, Man and Cybernetics Society." | the second line of a commented-out item is not commented | comment out that line in `societies.tex` |
-| Publications | `<b>Best Paper Award</b>` and two more | HTML in the bib `note`, meant for the webpage | print the `note` without tags: a biblatex source map that strips `<b>`/`</b>`, or a separate field for the web (`bib2html_award`) |
-| Teaching | "8.1" next to Spring 2011 | `\subsection {Spring 2011}` (numbered) | `\subsection*` |
-| Talks | AGI-2014 URL cut off at the right margin | `\verb` does not break | `\url{}` |
-| Last line | `\center{...}` | `\center` is an environment, not a command | `\begin{center}...\end{center}` or `\centering` |
-
-## 4. Data quality (mechanical)
+## 3. Data quality (mechanical)
 
 ### Typos in publications (`Boloni.bib`)
 - **Chapters:**
@@ -307,11 +277,10 @@ All rows fixed. The award notes now print in bold through a biblatex source map 
   - "commitees" (twice);
   - capitalization varies: "Work Experience" vs "Professional societies" vs "Department and college level commitees".
 
-## 5. Proposed order of work
+## 4. Proposed order of work
 
-1. **§3 rendering bugs and the CPlane dates.** About an hour, and no decisions needed. Each fix can be checked by rebuilding and diffing the text.
-2. **§4 typos and bib field clean-up,** together with the `REVIEW-BIBLIOGRAPHY.md` items.
-3. **Decisions in §1:**
+1. **§3 typos and bib field clean-up,** together with the `REVIEW-BIBLIOGRAPHY.md` items.
+2. **Decisions in §1:**
    - funding in the default CV;
    - profile paragraph;
    - section order;
@@ -319,8 +288,8 @@ All rows fixed. The award notes now print in bold through a biblatex source map 
    - duplicate titles;
    - selected publications;
    - marking student co-authors.
-4. **Rewrite the Research Interests** and add the Google Scholar and ORCID links (needs Lotzi's input).
-5. **Compress Teaching, Program committees, the reviewer list and PhD committees** (§2.8–2.10). These are the largest page savings: an estimated 30 pages down to about 20.
-6. **Sort the lists newest first,** using a script like `Damla-Resume/tools/sortitems.py`.
+3. **Rewrite the Research Interests** and add the Google Scholar and ORCID links (needs Lotzi's input).
+4. **Compress Teaching, Program committees, the reviewer list and PhD committees** (§2.8–2.10). These are the largest page savings: an estimated 30 pages down to about 20.
+5. **Sort the lists newest first,** using a script like `Damla-Resume/tools/sortitems.py`.
 
 After each step: rebuild both variants, check the publication counts with `tools/bibcheck.py`, and compare the text with the previous PDF.
